@@ -14,11 +14,7 @@ class MyHashMapTest {
     void sizeTest() {
         MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
         Assertions.assertEquals(0, myHashMap.size());
-
-        for (int i = 0; i < 10; i++) {
-            myHashMap.put("key " + i, i);
-        }
-
+        myHashMap = fillMyHashMap();
         Assertions.assertEquals(10, myHashMap.size());
         myHashMap.remove("key 0");
         Assertions.assertEquals(9, myHashMap.size());
